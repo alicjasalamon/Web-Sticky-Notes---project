@@ -2,11 +2,24 @@
 {
    background : url("../images/note.png");
    background-repeat: no-repeat;
-   width : 300px;
-   height : 200px;
+   width : 240px;
+   height : 250px;
    text-align : center;
-   padding-top : 100px;
+   padding-top : 50px;
+   padding-left : 30px;
+   padding-right : 30px;
 
-   position : fixed;
+   position : absolute;
 
+}
+
+textarea {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-family: 'Bradley Hand ITC';
+    font-size : 20px;
+    color : black;
+    
+    
 }

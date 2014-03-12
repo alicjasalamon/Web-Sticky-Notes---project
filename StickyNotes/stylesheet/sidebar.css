@@ -1,6 +1,6 @@
 ﻿#sidebar
 {
-    width : 200px;
+    width : 50px;
     background-color: gray;
     opacity : 0.7;
 
@@ -18,17 +18,44 @@
 #sidebar .title
 {
      height : 50px;
-     font-size : 40px;
+
 }
+
 #sidebar .li
 {
     background-color : palegreen;
-    height : 40px;
-    font-size : 30px;
+    height : 50px;
     border-top : 1px solid gray;
 }
 
 #sidebar .li:hover
 {
     background-color : green;
+}
+
+#sidebar .li img, #optionsButton img
+{
+   padding : 1px;
+}
+
+#optionsButton
+{
+
+    top: 0;
+    right : 0;
+    position: fixed;
+
+    margin-left:auto; 
+    margin-right:0px;
+    height : 50px;
+    width : 50px;
+
+    background-color : white;
+    opacity : 0.5;
+}
+
+#optionsButton:hover
+{
+    background : gray url("../images/settings.png");
+    opacity : 0.8;
 }

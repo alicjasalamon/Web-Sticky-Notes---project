@@ -13,11 +13,10 @@
 
     $('#chalkBoard').click(function () {
         
-       // $('body').css('background-image', 'url(' + "images/chalkboard.jpg" + ')');
-        // $(".note").css('background-image', 'url(' + "images/chalkNote.png" + ')');
+       $('body').css('background-image', 'url(' + "images/chalkboard.jpg" + ')');
+       $(".note").css('background-image', 'url(' + "images/chalkNote.png" + ')');
+       $('textarea').css('color', 'white');
 
-        $('body').animate({'background-image' : 'url(' + "images/chalkboard.jpg" + ')'}, 1000);
-        $(".note").animate({'background-image': 'url(' + "images/chalkNote.png" + ')'}, 1000);
 
     });
 
@@ -25,12 +24,14 @@
 
         $('body').css('background-image', 'url(' + "images/corkboard.jpg" + ')');
         $(".note").css('background-image', 'url(' + "images/note.png" + ')');
+        $('textarea').css('color', 'black');
     });
 
 
-/*    $('#fridgeBoard').click(function () {
+    $('#fridge').click(function () {
 
         $('body').css('background-image', 'url(' + "images/fridge.jpg" + ')');
         $(".note").css('background-image', 'url(' + "images/fridgenote.png" + ')');
-    });*/
+        $('textarea').css('color', 'black');
+    });
 });

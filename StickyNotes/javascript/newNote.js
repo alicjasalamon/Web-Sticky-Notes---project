@@ -5,7 +5,6 @@
 
         $('#board div:first')
           .clone()
-          .append('clone')
           .css('left', mainEvent.pageX)
           .css('top', mainEvent.pageY - 25)
           .appendTo($('#board'));
