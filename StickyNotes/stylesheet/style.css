@@ -1,0 +1,70 @@
+﻿body
+{
+    margin : 0;
+    padding : 0;
+    background : url("../images/corkboard.jpg") center center;
+    font-family : 'Bradley Hand ITC'
+}
+
+#board
+{
+    height : 1000px;
+    width : 100%;
+}
+
+#optionsButton
+{
+
+    top: 0;
+    right : 0;
+    position: fixed;
+
+    margin-left:auto; 
+    margin-right:0px;
+    height : 50px;
+    width : 50px;
+
+    background : white url("../images/options.png");
+    opacity : 0.5;
+}
+
+#optionsButton:hover
+{
+    background : gray url("../images/options.png");
+    opacity : 0.8;
+}
+
+header
+{
+    height : 50px;
+    background-color : white;
+    text-align : center;
+    opacity : 0.4;
+
+}
+
+footer {
+    height: 30px;
+    background-color: white;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+    opacity : 0.4;
+    text-align : center;
+}
+
+header p {
+   font-size : 40px;
+}
+
+footer p {
+   font-size : 20px;
+   color : black;
+   opacity : 1;
+}
+
+p
+{
+    margin : 0px;
+    padding : 0px;
+}

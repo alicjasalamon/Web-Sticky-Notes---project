@@ -1,0 +1,12 @@
+﻿.note
+{
+   background : url("../images/note.png");
+   background-repeat: no-repeat;
+   width : 300px;
+   height : 200px;
+   text-align : center;
+   padding-top : 100px;
+
+   position : fixed;
+
+}

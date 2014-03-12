@@ -1,0 +1,34 @@
+﻿#sidebar
+{
+    width : 200px;
+    background-color: gray;
+    opacity : 0.7;
+
+    top: 50px;
+    right : 0;
+    position: fixed;
+
+    margin-left:auto; 
+    margin-right:0px;
+
+    display : none;
+
+}
+
+#sidebar .title
+{
+     height : 50px;
+     font-size : 40px;
+}
+#sidebar .li
+{
+    background-color : palegreen;
+    height : 40px;
+    font-size : 30px;
+    border-top : 1px solid gray;
+}
+
+#sidebar .li:hover
+{
+    background-color : green;
+}
