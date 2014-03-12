@@ -12,9 +12,19 @@
     });
 
     $('#chalkBoard').click(function () {
+
+        var image = $('#background');
+        image.fadeOut(1000, function () {
+            image.css("background", "url(images/chalkboard.jpg)");
+            image.fadeIn(1000);
+        });
+
+        var notes= $('.note');
+        notes.fadeOut(1000, function () {
+            notes.css("background", "url(images/chalkNote.png)");
+            notes.fadeIn(1000);
+        });
         
-       $('body').css('background-image', 'url(' + "images/chalkboard.jpg" + ')');
-       $(".note").css('background-image', 'url(' + "images/chalkNote.png" + ')');
        $('textarea').css('color', 'white');
 
 
@@ -22,16 +32,37 @@
 
     $('#corkBoard').click(function () {
 
-        $('body').css('background-image', 'url(' + "images/corkboard.jpg" + ')');
-        $(".note").css('background-image', 'url(' + "images/note.png" + ')');
+        var image = $('#background');
+        image.fadeOut(1000, function () {
+            image.css("background", "url(images/corkboard.jpg)");
+            image.fadeIn(1000);
+        });
+
+        var notes = $('.note');
+        notes.fadeOut(1000, function () {
+            notes.css("background", "url(images/note.png)");
+            notes.fadeIn(1000);
+        });
+
         $('textarea').css('color', 'black');
     });
 
 
     $('#fridge').click(function () {
 
-        $('body').css('background-image', 'url(' + "images/fridge.jpg" + ')');
-        $(".note").css('background-image', 'url(' + "images/fridgenote.png" + ')');
+        var image = $('#background');
+        image.fadeOut(1000, function () {
+            image.css("background", "url(images/fridge.jpg)");
+            image.fadeIn(1000);
+        });
+
+        var notes = $('.note');
+        notes.fadeOut(1000, function () {
+            notes.css("background", "url(images/fridgenote.png)");
+            notes.fadeIn(1000);
+        });
+
         $('textarea').css('color', 'black');
     });
+
 });
