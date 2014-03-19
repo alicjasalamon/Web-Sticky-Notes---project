@@ -13,6 +13,8 @@
 
     display : none;
 
+    z-index : 1;
+
 }
 
 #sidebar .title
@@ -23,14 +25,14 @@
 
 #sidebar .li
 {
-    background-color : palegreen;
+    background-color : beige;
     height : 50px;
     border-top : 1px solid gray;
 }
 
 #sidebar .li:hover
 {
-    background-color : green;
+    background-color : lightblue;
 }
 
 #sidebar .li img, #optionsButton img
@@ -56,6 +58,6 @@
 
 #optionsButton:hover
 {
-    background : gray url("../images/settings.png");
+    background : gray url("../images/Settings.png");
     opacity : 0.8;
 }

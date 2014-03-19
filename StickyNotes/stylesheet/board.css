@@ -1,0 +1,19 @@
+﻿.board {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.corkBoard {
+    background: url("../images/boards/corkboard.jpg") center center;
+}
+
+.chalkBoard {
+    background: url("../images/boards/chalkboard.jpg") center center;
+}
+
+.fridgeBoard {
+    background: url("../images/boards/fridgeboard.jpg") center center;
+}

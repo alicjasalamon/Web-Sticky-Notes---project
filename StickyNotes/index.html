@@ -3,39 +3,56 @@
 <head>
     <meta charset="utf-8" />
     <script src="http://code.jquery.com/jquery-2.1.0.js"></script>
+    <script src="javascript/lib/jquery-ui-1.10.4.custom.min.js"></script>
     <script src="javascript/newNote.js"></script>
+    <script src="javascript/newView.js"></script>
+    <script src="javascript/deleteNote.js"></script>
     <script src="javascript/showOptions.js"></script>
     <link href='http://fonts.googleapis.com/css?family=The+Girl+Next+Door' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="stylesheet/style.css">
+    <link rel="stylesheet" href="stylesheet/general.css">
     <link rel="stylesheet" href="stylesheet/sidebar.css">
     <link rel="stylesheet" href="stylesheet/note.css">
+    <link rel="stylesheet" href="stylesheet/note-cork.css">
+    <link rel="stylesheet" href="stylesheet/note-chalk.css">
+    <link rel="stylesheet" href="stylesheet/note-fridge.css">
+    <link rel="stylesheet" href="stylesheet/board.css">
+    <link rel="stylesheet" href="stylesheet/ui-lightness/jquery-ui-1.10.4.custom.css">
     <title>Alicja Salamon - sticky notes</title>
 </head>
 <body>
 
-    <div id="background">
+    <div class="board fridgeBoard" id="board">
 
         <header>
-            <p> <strong> WEB STICKY NOTES</strong> </p>
+            <div>
+                <p> <strong> WEB STICKY NOTES</strong> </p>
+            </div>
         </header>
 
-        <div id="optionsButton"> <img src="images/Settings.png" /></div>
-
+        <div id="optionsButton"> <img src="images/icons/Settings.png" /></div>
         <div id="sidebar">
-            <div class="li" id="corkBoard"> <img src="images/Pin.png" /></div>
-            <div class="li" id="chalkBoard"><img src="images/Board.png" /></div>
-            <div class="li" id="fridge"> <img src="images/Fridge.png" /> </div>
+            <div class="li" id="corkBoard"> <img src="images/icons/Pin.png" /></div>
+            <div class="li" id="chalkBoard"><img src="images/icons/Board.png" /></div>
+            <div class="li" id="fridge"> <img src="images/icons/Fridge.png" /> </div>
         </div>
 
-        <div id="board">
-            <div class="note" id="noteToCopy">
-                <textarea name="Text1" cols="20" rows="6" autofocus></textarea>
+        <div id="noteContainer">
 
+            <div id="notePrototype" class="note">
+                <div class="closeButton">
+                    <img src="images/icons/Close.png" class="delete"/>
+                </div>
+
+                <div class="text">
+                    <textarea autofocus></textarea>
+                </div>
             </div>
         </div>
 
         <footer>
-            <p>alicjasalamon@gmail.com</p>
+            <div>
+                <p>alicjasalamon@gmail.com</p>
+            </div>
         </footer>
 
     </div>

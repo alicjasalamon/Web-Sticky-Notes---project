@@ -1,0 +1,35 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    font-family: 'The Girl Next Door';
+}
+
+header {
+    height: 50px;
+    background-color: white;
+    text-align: center;
+    opacity: 0.4;
+}
+
+footer {
+    height: 30px;
+    background-color: white;
+    bottom: 0;
+    position: fixed;
+    opacity: 0.4;
+    width : 100%;
+}
+
+header div p {
+    font-size: 35px;
+}
+
+footer div p {
+    font-size: 20px;
+    text-align : center;
+}
+
+p{
+    margin : 0px;
+    padding : 0px;
+}

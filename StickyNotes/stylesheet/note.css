@@ -1,17 +1,13 @@
-﻿.note
-{
-   background : url("../images/note.png");
-   background-repeat: no-repeat;
-   width : 240px;
-   height : 250px;
-   text-align : center;
-   padding-top : 50px;
-   padding-left : 30px;
-   padding-right : 30px;
-
-   position : absolute;
-
+﻿.note {
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+    position: absolute;
 }
+
+    .note:hover {
+        cursor: move;
+    }
 
 textarea {
     background-color: transparent;
@@ -21,6 +17,18 @@ textarea {
     font-size: 20px;
     color: black;
     resize: none;
-    overflow : hidden;
- 
+    overflow: hidden;
+}
+
+.closeButton {
+    width: 100%;
+    background-color: transparent;
+}
+
+    .closeButton img {
+        cursor: pointer;
+    }
+
+#notePrototype {
+    display: none;
 }
