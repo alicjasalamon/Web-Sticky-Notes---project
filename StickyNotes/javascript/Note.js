@@ -1,10 +1,9 @@
-﻿function Note(style) 
+﻿function Note() 
 {
     this.id = now();
-    this.style = style; //take current style from body class
-    this.text = "";
-    this.positionX = 1;
-    this.positionY = 1;
+    this.text = "ziom";
+    this.positionX = 20;
+    this.positionY = 30;
 }
 
 

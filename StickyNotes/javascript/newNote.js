@@ -37,6 +37,7 @@
         newNote.css('left', e.pageX);
         newNote.css('top', e.pageY - 25);
         newNote.removeAttr('id');
+        newNote.attr('id', 'note' + $.now());
         newNote.draggable();
 
         var key = board.attr('class').split(' ')[1];
@@ -44,5 +45,10 @@
         newNote.appendTo(container);
 
     });
+
+    $('body').on('blur', 'textarea', function(){
+        console.log('was changed2');
+    });
+
 
 });
