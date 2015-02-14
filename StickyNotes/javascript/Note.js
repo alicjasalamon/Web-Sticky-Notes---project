@@ -1,32 +1,53 @@
-﻿function Note() 
+﻿var map = {};
+map['corkBoard'] = 'corkNote';
+map['chalkBoard'] = 'chalkNote';
+map['fridgeBoard'] = 'fridgeNote';
+
+function createEmptyNote(e)
 {
-    this.id = now();
-    this.text = "ziom";
-    this.positionX = 20;
-    this.positionY = 30;
+    var notes = $('.note');
+    notes.css('position', 'absolute');
+
+    var prototype = $('#notePrototype');
+    var newNote = prototype.clone();
+
+    var container = $('#noteContainer');
+    var board = $('#board');
+
+    newNote.css('left', e.pageX);
+    newNote.css('top', e.pageY);
+    newNote.removeAttr('id');
+    newNote.attr('id', 'note' + $.now());
+    newNote.draggable();
+
+    var key = board.attr('class').split(' ')[1];
+    newNote.addClass(map[key]);
+    newNote.appendTo(container);
+
 }
 
+function renderNote(db_note)
+{
+    var notes = $('.note');
+    notes.css('position', 'absolute');
 
-//////////////////////////////////////////////
-//                 CRUD                     //    
-//////////////////////////////////////////////
-Note.prototype.create = function () {
-    //po kliknieciu na board:
-    //stworz notatke i ustaw jej styl
-    //dodaj do bazy
-}
+    var prototype = $('#notePrototype');
+    var newNote = prototype.clone();
 
-Note.prototype.upadate = function () {
-    //kiedy skonczymy zmieniac text:
-    //edytuj w bazie
-}
+    var container = $('#noteContainer');
+    var board = $('#board');
 
-Note.prototype.delete = function () {
-    //kiedy klikniemy na krzyzyk:
-    //usuwamy notatke
-    //usuwamy z bazy
-}
+    newNote.css('left', db_note.x);
+    newNote.css('top', db_note.y);
+    newNote.removeAttr('id');
+    newNote.attr('id', db_note.id);
 
-Note.prototype.renderFromDB = function (){
-    //jak odswiezamy stronke to ladujamy z bazy
+    var textarea = newNote.find('textarea');
+    textarea.html(db_note.text);
+
+    newNote.draggable();
+
+    var key = board.attr('class').split(' ')[1];
+    newNote.addClass(map[key]);
+    newNote.appendTo(container);
 }

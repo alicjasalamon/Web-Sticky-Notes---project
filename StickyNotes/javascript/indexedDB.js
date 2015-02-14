@@ -19,6 +19,8 @@
         $('body').on('blur', 'textarea', addNote);
         getAllNotes();
 
+        $('body').on('click', '.delete', deleteNote);
+
     }
 
     openRequest.onerror = function (e) {
@@ -61,6 +63,26 @@ function addNote(e) {
     }
 }
 
+function deleteNote(e)
+{            
+    var note = $(e.target).parent().parent();
+    var transaction = db.transaction(["notesOS"], "readwrite");
+    var store = transaction.objectStore("notesOS");
+
+    note.remove();
+    var request = store.delete(note.attr('id'));
+
+
+    request.onerror = function (e) {
+        console.log("Error", e.target.error.name);
+        //some type of error handler
+    }
+
+    request.onsuccess = function (e) {
+        // console.log("Woot! Did it");
+    }
+}
+
 function getAllNotes()
 {
     var transaction = db.transaction(["notesOS"], "readonly");
@@ -75,36 +97,4 @@ function getAllNotes()
             res.continue();
         }
     }
-}
-
-function renderNote(db_note)
-{
-    var notes = $('.note');
-    notes.css('position', 'absolute');
-
-    var map = {};
-    map['corkBoard'] = 'corkNote';
-    map['chalkBoard'] = 'chalkNote';
-    map['fridgeBoard'] = 'fridgeNote';
-
-    var prototype = $('#notePrototype');
-    var newNote = prototype.clone();
-
-    var container = $('#noteContainer');
-    var board = $('#board');
-
-    newNote.css('left', db_note.x);
-    newNote.css('top', db_note.y);
-    newNote.removeAttr('id');
-    newNote.attr('id', db_note.id);
-    
-    var textarea = newNote.find('textarea');
-    textarea.html(db_note.text);
-    console.log(textarea);
-
-    newNote.draggable();
-
-    var key = board.attr('class').split(' ')[1];
-    newNote.addClass(map[key]);
-    newNote.appendTo(container);
 }
